@@ -9,7 +9,7 @@ int main (){
 
   if(x>y){
       for(int i=1; i<=20; i++)
-        s+=pow(abs(x+y), 1.0 / 3)+tan(x);
+        s=pow(abs(x-y), 1 / 3)+tan(x);
       cout << s;
   }
   else if(x<y){
@@ -19,7 +19,7 @@ int main (){
   }
   else{
       for(int i=1; i<=20; i++)
-        s+=pow((x+y), 2)+pow(x, 3);
+        s=pow((x+y), 2)+pow(x, 3);
       cout << s;
   }
 
