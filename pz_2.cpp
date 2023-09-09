@@ -1,3 +1,4 @@
+/* Вариант 4
 #include <iostream>
 #include <math.h>
 using namespace std;
