@@ -134,4 +134,42 @@ int main() {
 
     return 0;
 }
+
+6.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, m;
+
+    cout << "Введите количество строк: ";
+    cin >> n;
+    cout << "Введите количество столбцов: ";
+    cin >> m;
+
+    int original[n][m], rotated[m][n];
+
+    cout << "Введите элементы массива:" << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> original[i][j];
+        }
+    }
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            rotated[i][j] = original[j][m - 1 - i];
+        }
+    }
+
+    cout << "Повернутый массив:" << endl;
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << rotated[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
   
