@@ -74,3 +74,40 @@ int main() {
 
     return 0;
 }
+
+задание 4 
+    #include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string text;
+    getline(cin, text); 
+
+    bool foundFirst = false; 
+    int firstIndex = -1;
+    int secondIndex = -1; 
+
+ 
+    for (int i = 0; i < text.length(); i++) {
+        if (text[i] == '=') {
+            if (!foundFirst) {
+                foundFirst = true;
+                firstIndex = i;
+            } else {
+                secondIndex = i;
+                break;
+            }
+        }
+    }
+
+    if (firstIndex != -1 && secondIndex != -1) {
+        for (int i = firstIndex + 1; i < secondIndex; i++) {
+            cout << text[i];
+        }
+    }
+
+    cout << endl;
+
+    return 0;
+}
